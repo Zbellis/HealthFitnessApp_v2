@@ -13,6 +13,7 @@ class InterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
+        print("Hello world2")
     }
     
     override func willActivate() {
