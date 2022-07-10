@@ -11,22 +11,31 @@
             <objects>
                 <controller identifier="Resting Stamina Bar" title="Resting Stamina" id="W18-Pv-ZmH" customClass="InterfaceController" customModule="HealthFitnessAppV2_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="center" verticalAlignment="bottom" title="Button" id="pVT-nZ-Bir">
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Pick Workout" id="pVT-nZ-Bir">
                             <connections>
                                 <segue destination="Dfe-tU-5UP" kind="push" id="ymd-ft-IHU"/>
                             </connections>
                         </button>
+                        <label alignment="left" text="Label" id="b8Z-DJ-WNz"/>
+                        <button width="1" alignment="center" verticalAlignment="center" title="RunApp" id="3e2-ra-Dpy">
+                            <connections>
+                                <action selector="runHRStats" destination="W18-Pv-ZmH" id="Fwv-Pe-LnQ"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="currentHRLbl" destination="b8Z-DJ-WNz" id="y9X-sj-WK6"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-1102" y="-159"/>
+            <point key="canvasLocation" x="-1462" y="-159"/>
         </scene>
         <!--Add Workout-->
         <scene sceneID="Vgq-5U-QAe">
             <objects>
                 <controller identifier="Add Workouts" title="Add Workout" id="9XG-Cx-ad5"/>
             </objects>
-            <point key="canvasLocation" x="-145" y="-159"/>
+            <point key="canvasLocation" x="42" y="-159"/>
         </scene>
         <!--Workouts-->
         <scene sceneID="NHK-8F-P96">
@@ -38,7 +47,11 @@
                                 <segue destination="9XG-Cx-ad5" kind="push" id="Lsb-Zu-lbV"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="center" verticalAlignment="bottom" title="Button" id="R59-Co-8cz"/>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Start Workout" id="R59-Co-8cz">
+                            <connections>
+                                <segue destination="MS4-dT-Khc" kind="push" id="gYh-wV-4tE"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
@@ -57,7 +70,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-640" y="-627"/>
+            <point key="canvasLocation" x="-640" y="471"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -74,21 +87,21 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="-1102" y="349"/>
+            <point key="canvasLocation" x="-2252" y="674"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="HealthFitnessAppV2_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-1102" y="841"/>
+            <point key="canvasLocation" x="-2252" y="1198"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
                 <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="HealthFitnessAppV2_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-640" y="349"/>
+            <point key="canvasLocation" x="-1912" y="674"/>
         </scene>
     </scenes>
     <resources>

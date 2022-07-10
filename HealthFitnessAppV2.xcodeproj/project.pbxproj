@@ -16,6 +16,8 @@
 		D591A354287B4323004BB5AD /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A353287B4323004BB5AD /* NotificationController.swift */; };
 		D591A356287B4323004BB5AD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A355287B4323004BB5AD /* ComplicationController.swift */; };
 		D591A358287B4324004BB5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D591A357287B4324004BB5AD /* Assets.xcassets */; };
+		D591A36C287B4D58004BB5AD /* HeartRateMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A36B287B4D58004BB5AD /* HeartRateMeasurement.swift */; };
+		D591A36E287B527A004BB5AD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D591A369287B4B95004BB5AD /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,9 @@
 		D591A357287B4324004BB5AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D591A359287B4324004BB5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D591A35A287B4324004BB5AD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D591A369287B4B95004BB5AD /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		D591A36B287B4D58004BB5AD /* HeartRateMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMeasurement.swift; sourceTree = "<group>"; };
+		D591A36D287B5227004BB5AD /* HealthFitnessAppV2 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HealthFitnessAppV2 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D591A36E287B527A004BB5AD /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +98,7 @@
 				D591A340287B431D004BB5AD /* HealthFitnessAppV2 WatchKit App */,
 				D591A34E287B4323004BB5AD /* HealthFitnessAppV2 WatchKit Extension */,
 				D591A339287B431D004BB5AD /* Products */,
+				D591A368287B4B95004BB5AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,7 +124,9 @@
 		D591A34E287B4323004BB5AD /* HealthFitnessAppV2 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D591A36D287B5227004BB5AD /* HealthFitnessAppV2 WatchKit Extension.entitlements */,
 				D591A34F287B4323004BB5AD /* InterfaceController.swift */,
+				D591A36B287B4D58004BB5AD /* HeartRateMeasurement.swift */,
 				D591A351287B4323004BB5AD /* ExtensionDelegate.swift */,
 				D591A353287B4323004BB5AD /* NotificationController.swift */,
 				D591A355287B4323004BB5AD /* ComplicationController.swift */,
@@ -126,6 +135,14 @@
 				D591A35A287B4324004BB5AD /* PushNotificationPayload.apns */,
 			);
 			path = "HealthFitnessAppV2 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D591A368287B4B95004BB5AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D591A369287B4B95004BB5AD /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D591A354287B4323004BB5AD /* NotificationController.swift in Sources */,
+				D591A36C287B4D58004BB5AD /* HeartRateMeasurement.swift in Sources */,
 				D591A356287B4323004BB5AD /* ComplicationController.swift in Sources */,
 				D591A352287B4323004BB5AD /* ExtensionDelegate.swift in Sources */,
 				D591A350287B4323004BB5AD /* InterfaceController.swift in Sources */,
@@ -405,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HealthFitnessAppV2 WatchKit Extension/HealthFitnessAppV2 WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 339H39SFM9;
@@ -436,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HealthFitnessAppV2 WatchKit Extension/HealthFitnessAppV2 WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 339H39SFM9;
