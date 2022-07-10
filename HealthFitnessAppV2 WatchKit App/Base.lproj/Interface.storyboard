@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W18-Pv-ZmH">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Resting Stamina-->
+        <scene sceneID="u1f-Yc-OZr">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller identifier="Resting Stamina Bar" title="Resting Stamina" id="W18-Pv-ZmH" customClass="InterfaceController" customModule="HealthFitnessAppV2_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Button" id="pVT-nZ-Bir">
+                            <connections>
+                                <segue destination="Dfe-tU-5UP" kind="push" id="ymd-ft-IHU"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="-1102" y="-159"/>
+        </scene>
+        <!--Add Workout-->
+        <scene sceneID="Vgq-5U-QAe">
+            <objects>
+                <controller identifier="Add Workouts" title="Add Workout" id="9XG-Cx-ad5"/>
+            </objects>
+            <point key="canvasLocation" x="-145" y="-159"/>
+        </scene>
+        <!--Workouts-->
+        <scene sceneID="NHK-8F-P96">
+            <objects>
+                <controller identifier="Select Workout" title="Workouts" id="Dfe-tU-5UP">
+                    <items>
+                        <button width="25" height="25" alignment="right" backgroundImage="plus" catalog="system" id="dsw-yT-hjd">
+                            <connections>
+                                <segue destination="9XG-Cx-ad5" kind="push" id="Lsb-Zu-lbV"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Button" id="R59-Co-8cz"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-640" y="-159"/>
+        </scene>
+        <!--Workout Stamina-->
+        <scene sceneID="2YS-sC-cob">
+            <objects>
+                <controller identifier="Workout Stamina" title="Workout Stamina" id="MS4-dT-Khc">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="End Workout" id="1JJ-X8-pkP">
+                            <connections>
+                                <segue destination="W18-Pv-ZmH" kind="push" id="JVM-KO-28P"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-640" y="-627"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -27,21 +74,24 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="-1102" y="349"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="HealthFitnessAppV2_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="-1102" y="841"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="HealthFitnessAppV2_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="-640" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="112"/>
+    </resources>
 </document>
