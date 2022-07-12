@@ -23,7 +23,7 @@ class InterfaceController: WKInterfaceController {
 //            maxHrLbl.setText(String(heartRateMeasurementService.maxHeartRate))
 //            minHrLbl.setText(String(heartRateMeasurementService.minHeartRate))
 
-            print("HR Triggered")
+//            print("HR Triggered")
 //
 //            if heartRateMeasurementService.currentHeartRate < 85 {
 //                staminaBarImg.setImageNamed("StaminaBar")
