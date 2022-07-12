@@ -19,19 +19,6 @@ class InterfaceController: WKInterfaceController {
         _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [self] timer in
             
             currentHRLbl.setText(String(heartRateMeasurementService.currentHeartRate))
-//            hrLbl.setText(String(heartRateMeasurementService.currentHeartRate))
-//            maxHrLbl.setText(String(heartRateMeasurementService.maxHeartRate))
-//            minHrLbl.setText(String(heartRateMeasurementService.minHeartRate))
-
-//            print("HR Triggered")
-//
-//            if heartRateMeasurementService.currentHeartRate < 85 {
-//                staminaBarImg.setImageNamed("StaminaBar")
-//            } else if heartRateMeasurementService.currentHeartRate < 100 {
-//                staminaBarImg.setImageNamed("StaminaBar80")
-//            } else  {
-//                staminaBarImg.setImageNamed("StaminaBar60")
-//            }
         }
     }
     
