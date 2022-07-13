@@ -11,14 +11,18 @@ import HealthKit
 
 class InterfaceController: WKInterfaceController {
     
+    @IBOutlet weak var minHRLbl: WKInterfaceLabel!
     @IBOutlet weak var currentHRLbl: WKInterfaceLabel!
+    @IBOutlet weak var maxHRLbl: WKInterfaceLabel!
     var heartRateMeasurementService = HeartRateMeasurementService()
     
    
     @IBAction func runHRStats() {
         _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [self] timer in
-            
             currentHRLbl.setText(String(heartRateMeasurementService.currentHeartRate))
+            minHRLbl.setText(String(heartRateMeasurementService.minHeartRate))
+            maxHRLbl.setText(String(heartRateMeasurementService.maxHeartRate))
+
         }
     }
     

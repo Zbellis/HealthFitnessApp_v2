@@ -11,12 +11,9 @@
             <objects>
                 <controller identifier="Resting Stamina Bar" title="Resting Stamina" id="W18-Pv-ZmH" customClass="InterfaceController" customModule="HealthFitnessAppV2_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="center" verticalAlignment="bottom" title="Pick Workout" id="pVT-nZ-Bir">
-                            <connections>
-                                <segue destination="Dfe-tU-5UP" kind="push" id="ymd-ft-IHU"/>
-                            </connections>
-                        </button>
-                        <label alignment="left" text="Label" id="b8Z-DJ-WNz"/>
+                        <label alignment="left" text="Min Bound" id="2IU-Qm-B55"/>
+                        <label alignment="left" text="Current HR" id="b8Z-DJ-WNz"/>
+                        <label alignment="left" text="Max Bound" id="6Xd-gY-adN"/>
                         <button width="1" alignment="center" verticalAlignment="center" title="RunApp" id="3e2-ra-Dpy">
                             <connections>
                                 <action selector="runHRStats" destination="W18-Pv-ZmH" id="Fwv-Pe-LnQ"/>
@@ -25,52 +22,12 @@
                     </items>
                     <connections>
                         <outlet property="currentHRLbl" destination="b8Z-DJ-WNz" id="y9X-sj-WK6"/>
+                        <outlet property="maxHRLbl" destination="6Xd-gY-adN" id="EEw-J9-gbq"/>
+                        <outlet property="minHRLbl" destination="2IU-Qm-B55" id="glv-tv-T2o"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-1462" y="-159"/>
-        </scene>
-        <!--Add Workout-->
-        <scene sceneID="Vgq-5U-QAe">
-            <objects>
-                <controller identifier="Add Workouts" title="Add Workout" id="9XG-Cx-ad5"/>
-            </objects>
-            <point key="canvasLocation" x="42" y="-159"/>
-        </scene>
-        <!--Workouts-->
-        <scene sceneID="NHK-8F-P96">
-            <objects>
-                <controller identifier="Select Workout" title="Workouts" id="Dfe-tU-5UP">
-                    <items>
-                        <button width="25" height="25" alignment="right" backgroundImage="plus" catalog="system" id="dsw-yT-hjd">
-                            <connections>
-                                <segue destination="9XG-Cx-ad5" kind="push" id="Lsb-Zu-lbV"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="center" verticalAlignment="bottom" title="Start Workout" id="R59-Co-8cz">
-                            <connections>
-                                <segue destination="MS4-dT-Khc" kind="push" id="gYh-wV-4tE"/>
-                            </connections>
-                        </button>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-640" y="-159"/>
-        </scene>
-        <!--Workout Stamina-->
-        <scene sceneID="2YS-sC-cob">
-            <objects>
-                <controller identifier="Workout Stamina" title="Workout Stamina" id="MS4-dT-Khc">
-                    <items>
-                        <button width="1" alignment="center" verticalAlignment="bottom" title="End Workout" id="1JJ-X8-pkP">
-                            <connections>
-                                <segue destination="W18-Pv-ZmH" kind="push" id="JVM-KO-28P"/>
-                            </connections>
-                        </button>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-640" y="471"/>
+            <point key="canvasLocation" x="-1374" y="-159"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -104,7 +61,4 @@
             <point key="canvasLocation" x="-1912" y="674"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="plus" catalog="system" width="128" height="112"/>
-    </resources>
 </document>
